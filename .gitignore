@@ -36,3 +36,4 @@ Thumbs.db
 # Local configs
 *.local.yaml
 *.local.yml
+pytest.xml

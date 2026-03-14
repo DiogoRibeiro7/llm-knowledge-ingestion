@@ -1,5 +1,8 @@
 # llm-knowledge-ingestion
 
+[![CI](https://github.com/DiogoRibeiro7/llm-knowledge-ingestion/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/DiogoRibeiro7/llm-knowledge-ingestion/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/DiogoRibeiro7/llm-knowledge-ingestion/branch/develop/graph/badge.svg)](https://codecov.io/gh/DiogoRibeiro7/llm-knowledge-ingestion)
+
 Ingestion and indexing layer for the multi-repository LLM data engineering platform.
 
 ## Platform Position
