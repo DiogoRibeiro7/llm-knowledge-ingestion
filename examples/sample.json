@@ -1,0 +1,5 @@
+{
+  "title": "Sample JSON Doc",
+  "category": "example",
+  "body": "JSON content should be canonicalized before hashing."
+}

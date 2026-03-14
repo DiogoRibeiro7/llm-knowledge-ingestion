@@ -1,0 +1,25 @@
+app:
+  environment: dev
+  schema_version: "1.0"
+
+ingestion:
+  source_type: filesystem
+  source_id: "example-source"
+  input_path: "./examples"
+  max_documents: 100
+
+chunking:
+  strategy: fixed_tokens
+  target_tokens: 400
+  overlap_tokens: 40
+
+dedup:
+  algorithm: sha256
+  enabled: true
+
+output:
+  normalized_documents_path: "./artifacts/documents"
+  chunks_path: "./artifacts/chunks"
+  lineage_path: "./artifacts/lineage"
+  index_records_path: "./artifacts/index"
+  run_result_path: "./artifacts/run/ingestion_result.json"

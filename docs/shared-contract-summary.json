@@ -1,0 +1,38 @@
+{
+  "shared_contract_version": "1.0",
+  "repository": "llm-knowledge-ingestion",
+  "identifiers": {
+    "source_id": {"type": "string", "description": "Stable identifier of the upstream knowledge source."},
+    "document_id": {"type": "string", "description": "Stable identifier of a normalized source document."},
+    "chunk_id": {"type": "string", "description": "Stable identifier of a chunk derived from a document."},
+    "query_id": {"type": "string", "description": "Identifier of a single user or system query request."},
+    "trace_id": {"type": "string", "description": "Identifier grouping all events/spans in one execution trace."},
+    "dataset_id": {"type": "string", "description": "Logical identifier of a curated dataset."},
+    "dataset_version": {"type": "string", "description": "Immutable version of a curated dataset snapshot."},
+    "model_version": {"type": "string", "description": "Explicit model version used to produce runtime outputs."}
+  },
+  "contract_versions": {"ingestion_contract_version": "1.0"},
+  "handoffs": {
+    "produces": [
+      {
+        "name": "normalized_documents",
+        "format": "jsonl",
+        "required_fields": ["source_id", "document_id", "content_hash"],
+        "example": "examples/integration/ingestion_documents_for_dataset_foundry.jsonl"
+      },
+      {
+        "name": "chunks",
+        "format": "jsonl",
+        "required_fields": ["chunk_id", "document_id", "text"],
+        "example": "examples/integration/ingestion_chunks_for_observability.jsonl"
+      },
+      {
+        "name": "lineage",
+        "format": "jsonl",
+        "required_fields": ["source_id", "document_id", "chunk_id"],
+        "example": "examples/integration/ingestion_lineage_for_dataset_foundry.jsonl"
+      }
+    ],
+    "consumes": []
+  }
+}

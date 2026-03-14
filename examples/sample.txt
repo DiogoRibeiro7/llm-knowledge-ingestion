@@ -1,0 +1,2 @@
+Platform ingestion MVP sample text document.
+This file demonstrates plain text loading.
