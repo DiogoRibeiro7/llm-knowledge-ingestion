@@ -97,3 +97,7 @@ See detailed run and artifact documentation in `docs/mvp-ingestion.md`.
 - Machine-readable summary: docs/shared-contract-summary.json`n- Manual validator: python scripts/validate_shared_contracts.py`n- Cross-repo check example:
   python scripts/validate_shared_contracts.py --peer ../llm-observability-analytics/docs/shared-contract-summary.json --peer ../llm-dataset-foundry/docs/shared-contract-summary.json
 
+
+## Release Process
+
+See [docs/release-process.md](docs/release-process.md) for the coordinated `develop` -> `main` promotion and release workflow.
