@@ -20,7 +20,7 @@ classifiers = [
   "Topic :: Software Development :: Libraries",
 ]
 dependencies = [
-  "PyYAML>=6.0.2",
+  "PyYAML>=6.0.3",
 ]
 
 [project.optional-dependencies]
